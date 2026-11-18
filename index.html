@@ -524,6 +524,7 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
   function openCv(){ var a=document.createElement("a"); a.href=CV; a.download=CV; document.body.appendChild(a); a.click(); a.remove(); }
 
   async function getCv(){
+    try{ if (live && window.goatcounter && window.goatcounter.count) window.goatcounter.count({path:"cv-download", title:"CV download", event:true}); }catch(e){}
     if (!dl) { openCv(); return; }
     try {
       var res = await fetch(CV);
@@ -555,8 +556,34 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
     });
     window.scrollTo(0, 0);
   }
-  window.addEventListener("hashchange", route);
+  // Analytics (GoatCounter) - only on the live site
+  var live = /(^|\.)seifelsaeid\.com$/.test(location.hostname);
+  var gcQueue = [], firstHit = true;
+  function track(view){
+    if (!live) return;
+    var ev = { path: "/" + (view === "home" ? "" : view), title: "Seif El Din – " + view };
+    if (firstHit) {
+      var ref = new URLSearchParams(location.search).get("ref");
+      ev.referrer = ref ? ref : document.referrer;
+      firstHit = false;
+    } else {
+      ev.referrer = "";
+    }
+    if (window.goatcounter && window.goatcounter.count) window.goatcounter.count(ev);
+    else gcQueue.push(ev);
+  }
+  if (live) {
+    window.goatcounter = { no_onload: true };
+    var gs = document.createElement("script");
+    gs.async = true;
+    gs.src = "https://gc.zgo.at/count.js";
+    gs.setAttribute("data-goatcounter", "https://seifelsaeid.goatcounter.com/count");
+    gs.onload = function(){ while (gcQueue.length) window.goatcounter.count(gcQueue.shift()); };
+    document.head.appendChild(gs);
+  }
+  window.addEventListener("hashchange", function(){ route(); track((location.hash || "").slice(1) || "home"); });
   route();
+  track((location.hash || "").slice(1) || "home");
 
   var copyBtn = document.getElementById("copy");
   copyBtn.addEventListener("click", function(){
