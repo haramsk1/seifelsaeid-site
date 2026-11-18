@@ -174,6 +174,9 @@ ul.clean li::before{content:"";position:absolute;left:0;top:.72em;width:10px;bor
 .copy{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line-soft);background:none;color:var(--ink-2);padding:6px 10px;cursor:pointer;user-select:none}
 .copy:hover{color:var(--ink);border-color:var(--line)}
 footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.hero-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 24px}
+.updated{color:var(--ink-2)}
+.updated span{color:var(--accent)}
 .back{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--line);text-decoration:none;margin-bottom:28px}
 .back:hover{color:var(--ink)}
 .links a.on{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
@@ -202,10 +205,10 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
   <!-- SHEET 1 · HERO -->
   <section class="sheet hero" data-view="home" aria-labelledby="hero-title">
     <div class="sheet-body">
-      <div class="label">Aerospace Engineering BEng — QUB — Belfast, UK</div>
+      <div class="hero-top"><div class="label">Aerospace Engineering BEng — QUB — Belfast, UK</div><div class="label updated">Last updated: <span id="updated">18 Nov 2026</span></div></div>
       <h1 id="hero-title" style="margin-top:22px">Aerospace by degree.<br>Mechanical by <em>experience.</em></h1>
       <div class="tagline">DESIGN<span>.</span> BUILD<span>.</span> TEST<span>.</span></div>
-      <p>Final-year aerospace engineer with 13 months in industry across design, prototyping, testing, data analysis and software. Graduating summer 2027 and open to roles across aerospace, motorsport, defence and engineering consultancy.</p>
+      <p>Final-year aerospace engineer with 13 months in industry across design, prototyping, testing, data analysis and software. Graduating summer 2027 and open to roles across aerospace, mechanical design, motorsport, defence and engineering consultancy.</p>
       <div class="btns">
         <a class="btn primary" href="#projects">View projects →</a>
         <button type="button" class="btn" data-cv>Download CV ↓</button>
@@ -264,9 +267,8 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
             </dl>
             <div class="tags"><span class="tag">Root-cause analysis</span><span class="tag">Test design</span><span class="tag">Stepper drivers</span><span class="tag">Metrology</span></div>
           </div>
-          <div class="figs two">
-            <figure><img src="img/actuator-rig.jpg" alt="Linear actuator mounted on a test plate with a digital micrometer measuring piston travel"><figcaption><span>Fig. 1 — Accuracy rig</span><span>01</span></figcaption></figure>
-            <figure><img src="img/load-test.jpg" alt="Piston assembly clamped vertically with a hanging weight, labelled piston motor, anchor and micrometre"><figcaption><span>Fig. 2 — 28 kg load test</span><span>01</span></figcaption></figure>
+          <div class="figs">
+            <figure style="max-width:420px"><img src="img/actuator-rig.jpg" alt="Linear actuator mounted on a test plate with a digital micrometer measuring piston travel"><figcaption><span>Fig. 1 — Accuracy rig</span><span>01</span></figcaption></figure>
           </div>
         </article>
 
@@ -287,10 +289,10 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
             <div class="tags"><span class="tag">SolidWorks</span><span class="tag">Drawings &amp; tolerancing</span><span class="tag">DFM</span><span class="tag">Sheet metal</span></div>
           </div>
           <div class="figs">
-            <figure><img src="img/probe-jig.jpg" alt="CAD comparison of the new and old probe jig designs"><figcaption><span>Fig. 3 — Probe jig designs</span><span>02</span></figcaption></figure>
+            <figure><img src="img/probe-jig.jpg" alt="CAD comparison of the new and old probe jig designs"><figcaption><span>Fig. 2 — Probe jig designs</span><span>02</span></figcaption></figure>
             <div class="figs two">
-              <figure><img src="img/valve-jigs.jpg" alt="CAD renders of red valve assembly jigs fitted to the assembly"><figcaption><span>Fig. 4 — Valve jigs</span><span>02</span></figcaption></figure>
-              <figure><img src="img/alignment-jig.jpg" alt="CAD view of a three-part alignment jig, in pink, red and teal, clamped around a motor and bracket"><figcaption><span>Fig. 5 — 3-part alignment jig</span><span>02</span></figcaption></figure>
+              <figure><img src="img/valve-jigs.jpg" alt="CAD renders of red valve assembly jigs fitted to the assembly"><figcaption><span>Fig. 3 — Valve jigs</span><span>02</span></figcaption></figure>
+              <figure><img src="img/alignment-jig.jpg" alt="CAD view of a three-part alignment jig, in pink, red and teal, clamped around a motor and bracket"><figcaption><span>Fig. 4 — 3-part alignment jig</span><span>02</span></figcaption></figure>
             </div>
           </div>
         </article>
@@ -310,7 +312,7 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
             <div class="tags"><span class="tag">HALT</span><span class="tag">Thermal cycling</span><span class="tag">Leak testing</span><span class="tag">ASTM D5191</span></div>
           </div>
           <div class="figs">
-            <figure class="dark"><img src="img/app-test.jpg" alt="Graph of pressure and temperature over time for an analyser test run"><figcaption><span>Fig. 6 — Test run, pressure &amp; temperature</span><span>03</span></figcaption></figure>
+            <figure class="dark"><img src="img/app-test.jpg" alt="Graph of pressure and temperature over time for an analyser test run"><figcaption><span>Fig. 5 — Test run, pressure &amp; temperature</span><span>03</span></figcaption></figure>
           </div>
         </article>
 
@@ -329,8 +331,8 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
             <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">matplotlib</span><span class="tag">Excel VBA</span></div>
           </div>
           <div class="figs">
-            <figure class="dark"><img src="img/app-leak.jpg" alt="Leak test analysis report screen with a pressure over time chart"><figcaption><span>Fig. 7 — Leak test report</span><span>04</span></figcaption></figure>
-            <figure class="dark"><img src="img/app-thermal.jpg" alt="Chart of average cooling rate per cycle across a thermal cycling test"><figcaption><span>Fig. 8 — Thermal cycling trend</span><span>04</span></figcaption></figure>
+            <figure class="dark"><img src="img/app-leak.jpg" alt="Leak test analysis report screen with a pressure over time chart"><figcaption><span>Fig. 6 — Leak test report</span><span>04</span></figcaption></figure>
+            <figure class="dark"><img src="img/app-thermal.jpg" alt="Chart of average cooling rate per cycle across a thermal cycling test"><figcaption><span>Fig. 7 — Thermal cycling trend</span><span>04</span></figcaption></figure>
           </div>
         </article>
 
@@ -348,7 +350,7 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
             <div class="tags"><span class="tag">SolidWorks PDM</span><span class="tag">IFS ERP</span><span class="tag">Visualize</span><span class="tag">Procurement</span></div>
           </div>
           <div class="figs">
-            <figure><img src="img/drawing.jpg" alt="Engineering drawing of a valve leak tester block with section view, dimensions and tolerances, title block blurred"><figcaption><span>Fig. 9 — Manufacturing drawing</span><span>05</span></figcaption></figure>
+            <figure><img src="img/drawing.jpg" alt="Engineering drawing of a valve leak tester block with section view, dimensions and tolerances, title block blurred"><figcaption><span>Fig. 8 — Manufacturing drawing</span><span>05</span></figcaption></figure>
           </div>
         </article>
       </div>
@@ -377,8 +379,8 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
           <p class="mono" style="font-size:12px;color:var(--line)">On hold while I focus on my final year. The app may take a moment to wake up.</p>
         </div>
         <div class="figs">
-          <figure class="dark"><img src="img/aerocalc-ui.jpg" alt="AeroCalc interface showing setup, pre-flight check, enter values and calculate steps"><figcaption><span>Fig. 10 — Step-by-step interface</span><span>B</span></figcaption></figure>
-          <figure class="dark"><img src="img/aerocalc-results.jpg" alt="AeroCalc results panel listing background calculations such as drag, Mach number and speed of sound"><figcaption><span>Fig. 11 — Results and background calculations</span><span>B</span></figcaption></figure>
+          <figure class="dark"><img src="img/aerocalc-ui.jpg" alt="AeroCalc interface showing setup, pre-flight check, enter values and calculate steps"><figcaption><span>Fig. 9 — Step-by-step interface</span><span>B</span></figcaption></figure>
+          <figure class="dark"><img src="img/aerocalc-results.jpg" alt="AeroCalc results panel listing background calculations such as drag, Mach number and speed of sound"><figcaption><span>Fig. 10 — Results and background calculations</span><span>B</span></figcaption></figure>
         </div>
       </article>
     </div>
@@ -395,7 +397,8 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
         <span class="status s-wip">In progress — 2026/27</span>
         <p>A lightweight, purely mechanical landing module with no sensors, motors or electronics. It lets a UAV land stably on slopes up to about 35° and on uneven ground. Uses include search-and-rescue delivery, hazardous-site monitoring, sample collection and planetary exploration.</p>
         <dl class="kv" style="max-width:760px">
-          <dt>Platform</dt><dd>Designed around the <a href="https://enterprise.dji.com/matrice-30" target="_blank" rel="noopener" style="color:var(--ink)">DJI Matrice 30</a> industrial drone.</dd>
+          <dt>Prototype</dt><dd>Building and testing the prototype at home, using 3D-printed parts and off-the-shelf components.</dd>
+          <dt>Analysis</dt><dd>MATLAB optimisation of the leg and linkage geometry, alongside simulation in CAD.</dd>
           <dt>So far</dt><dd>Terrain analysis of Earth, specific sites and the Moon. Literature review including NASA designs. Compared hydraulic systems, mechanical linkages, mechanical differentials and rocker-bogie suspension.</dd>
           <dt>Direction</dt><dd>Adapting a rocker-bogie suspension into a passive landing gear that settles every foot before taking load.</dd>
         </dl>
@@ -403,7 +406,7 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
           <div class="phase done"><span class="label">Phase 1</span><b>Research &amp; terrain analysis</b><span>Done</span></div>
           <div class="phase done"><span class="label">Phase 2</span><b>Concept comparison</b><span>Done: rocker-bogie selected</span></div>
           <div class="phase now"><span class="label">Phase 3</span><b>Detailed design &amp; DFM</b><span>Now, to Dec 2026</span></div>
-          <div class="phase"><span class="label">Phase 4</span><b>Prototype &amp; testing</b><span>Early 2027</span></div>
+          <div class="phase now"><span class="label">Phase 4</span><b>Prototype &amp; testing</b><span>Started: initial testing with home-built parts and test rigs I designed</span></div>
           <div class="phase"><span class="label">Phase 5</span><b>Report &amp; presentation</b><span>Spring 2027</span></div>
         </div>
         <p class="mono" style="font-size:12px;color:var(--line)">CAD, analysis and test results will be added here as the project develops.</p>
@@ -420,9 +423,17 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
         <div class="stack">
           <span class="label">Project D — Queen's Formula Racing</span>
           <h2 id="fs-title">Formula Student</h2>
-          <span class="status s-wip">Just started — Oct 2026</span>
-          <p>I've recently joined Queen's Formula Racing in the structures and CAD team, working on the chassis. I'll add the work I've done here as the season goes on.</p>
-          <div class="tags"><span class="tag">Chassis</span><span class="tag">Structures</span><span class="tag">CAD</span></div>
+          <span class="status s-wip">In progress — 2026/27 season</span>
+          <p>I joined Queen's Formula Racing in October 2026 and work across two sub-teams: Structures &amp; Chassis, and CAD Transfer. I'll add CAD, analysis and photos here as the season goes on.</p>
+          <div class="stack" style="gap:10px">
+            <span class="label">Currently working on</span>
+            <ul class="clean">
+              <li><strong style="color:var(--ink)">Impact attenuator (IA):</strong> the energy-absorbing crash structure at the front of the car.</li>
+              <li><strong style="color:var(--ink)">Seat mount:</strong> mounting the driver's seat securely to the chassis.</li>
+              <li><strong style="color:var(--ink)">CAD transfer</strong></li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Structures &amp; Chassis</span><span class="tag">CAD Transfer</span></div>
         </div>
         <div class="placeholder">Work in progress<br>Updates coming this season</div>
       </article>
@@ -435,7 +446,7 @@ footer{padding:12px 0 40px;font-family:var(--mono);font-size:11px;letter-spacing
     <div class="sheet-body">
       <div>
         <div class="about">
-          <figure><img src="img/seif.jpg" alt="Seif smiling outdoors in running gear, holding a marathon finisher's medal" style="background:var(--paper)"><figcaption><span>Fig. 12 — Post-marathon</span><span>About</span></figcaption></figure>
+          <figure><img src="img/seif.jpg" alt="Seif smiling outdoors in running gear, holding a marathon finisher's medal" style="background:var(--paper)"><figcaption><span>Fig. 11 — Post-marathon</span><span>About</span></figcaption></figure>
           <div class="stack" style="gap:22px">
             <span class="label">About</span>
             <h2>Hey, I'm Seif.</h2>
